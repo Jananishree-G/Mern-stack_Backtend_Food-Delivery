@@ -2,9 +2,9 @@
   "name": "food-delivery-backend",
   "version": "1.0.0",
   "description": "Food Delivery Backend API",
-  "main": "server.js",
+  "main": "server-simple.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server-simple.js",
     "dev": "nodemon server.js",
     "seed": "node seed.js"
   },
