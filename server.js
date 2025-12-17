@@ -12,8 +12,19 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://frontend-two-wheat.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
+
+// Basic test route
+app.get('/', (req, res) => {
+  res.json({ message: 'Food Delivery API is running!' });
+});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
